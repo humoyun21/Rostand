@@ -53,11 +53,7 @@ const index = () => {
     }
   };
 
-  useEffect(() => {
-    if (localStorage.getItem("token")) {
-      navigate("/login");
-    }
-  }, []);
+
 
   return (
     <>
