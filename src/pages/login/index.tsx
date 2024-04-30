@@ -50,7 +50,7 @@ const index = () => {
     <>
       <div className="refister-wrapp w-full h-[100vh] flex items-center justify-center">
         <div className=" max-w-[700px] w-full border rounded-3xl bg-transparent py-7 px-5 flex flex-col items-center justify-center">
-          <h1 className="text-[24px] text-white mb-3">Form Login</h1>
+          <h1 className="text-[24px] text-black mb-3">Form Login</h1>
 
           <Formik
             initialValues={initialValues}
@@ -89,37 +89,8 @@ const index = () => {
               sx={{color:"blue" , fontSize:"16px" , fontWeight:"500"}}
               className="w-[90%]  bg-white py-2"
               >SUBMIT</Button>
-
-              {/* <button 
-                className="w-[90%] bg-white rounded-lg py-2 px-3 text-[18px] text-cyan-600 hover:bg-slate-300 active:bg-white  duration-300 active:text-cyan-600"
-                type="submit">Submit</button> */}
             </Form>
           </Formik>
-
-          {/* <form
-            onSubmit={handleSubmit}
-            className="flex flex-col items-center w-full"
-          >
-            <input
-              name="username"
-              onChange={handleChange}
-              type="text"
-              placeholder="Username"
-              className=" w-[90%] mb-3 py-2 px-4 bg-transparent border  outline-none text-white text-[20px] placeholder:text-white rounded-lg focus:border-yellow-700"
-            />
-            {error && <p className="mb-3 text-red-500">{error.username}</p>}
-            <input
-              name="password"
-              onChange={handleChange}
-              type="password"
-              placeholder="Password"
-              className=" w-[90%] mb-3 py-2 px-4 bg-transparent border  outline-none text-white text-[20px] placeholder:text-white rounded-lg focus:border-yellow-700"
-            />
-            {error && <p className="mb-3 text-red-500">{error.password}</p>}
-            <button className="w-[90%] bg-white rounded-lg py-2 px-3 text-[18px] text-cyan-600 hover:bg-slate-300 active:bg-white  duration-300 active:text-cyan-600">
-              Submit
-            </button>
-          </form> */}
           <button
             onClick={() => navigate("/")}
             className=" mt-3 text-end text-sky-600 rounded-lg py-2 px-3 text-[18px] "

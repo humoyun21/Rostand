@@ -16,7 +16,7 @@ function index() {
   const [brand, setBrand] = useState([]);
   const [model, setModel] = useState([]);
 
-  // interfas postsData --------------------------------
+
   interface postDataInterface {
     id: number;
     name: string;
@@ -26,9 +26,6 @@ function index() {
     brandId: number;
     modelId: number;
   }
-  //----------------------------------------------------
-
-  //Get prodacts =================================================
   const getProduct = async () => {
     try {
       const res = await getProducts();
@@ -37,9 +34,7 @@ function index() {
       console.log(error);
     }
   };
-  //==============================================================
 
-  // Function useEffect ==========================================
   useEffect(() => {
     getProduct();
     http.get("/models").then((res: any) => {
@@ -49,9 +44,7 @@ function index() {
       setBrand(res.data);
     });
   }, []);
-  //==============================================================
-
-  // handle inpure file creation images------------------------------
+ 
   const handelChange = (e: any) => {
     const file = new FormData();
     file.append("file", e.target.files[0]);
@@ -66,9 +59,7 @@ function index() {
         console.log(err);
       });
   };
-  //=================================================================
-
-  // add product function --------------------------------
+ 
   const createProduct = async (e: any) => {
     e.preventDefault();
     const data = {
@@ -94,9 +85,7 @@ function index() {
       console.log(err);
     }
   };
-  //================================================================
 
-  // edit product function ------------------------------------------
   const updateProduct = async(e: any) => {
     e.preventDefault();
     const data = {
@@ -122,9 +111,7 @@ function index() {
       console.log(err);
     }
   };
-  //================================================================
-
-  // delete product function-------------------------------
+ 
   const deleteProduct = async (id: number | string) => {
     try {
       const res = await deleteProducts(id);
@@ -141,7 +128,7 @@ function index() {
       }
     }
   };
-  //=========================================================
+
 
   return (
     <>
